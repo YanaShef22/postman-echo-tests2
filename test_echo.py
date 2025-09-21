@@ -63,7 +63,7 @@ def test_get_empty_args(session):
 
     assert response.status_code == 200
     json_data = response.json()
-    assert json_data["args"] == {}, "Expected empty args object for empty query"
+    assert json_data["args"] == {"broken": "true"}, "Expected empty args object for empty query"
 
 
 # === ТЕСТ 4: POST с form-data (x-www-form-urlencoded) ===
